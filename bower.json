@@ -1,0 +1,25 @@
+{
+  "name": "ux-toolkit",
+  "version": "0.0.0",
+  "authors": [
+    "Tyler Youngblood <tyleryoungblood@yahoo.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass-official": "~3.2.0",
+    "rangeslider.js": "~0.3.3",
+    "nouislider": "~7.0.1",
+    "bootstrap.growl": "~2.0.1",
+    "gridline-bootstrap": "*"
+  },
+  "homepage": "https://github.com/tyleryoungblood/UX-toolkit"
+}

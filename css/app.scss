@@ -1,0 +1,822 @@
+// Inject files here with a double underscore in front of them (such as __variables.scss)
+// inject:top:scss
+@import "__brandingVariables.scss";
+// endinject
+
+// Inject files here using the command `bower install --save`
+// bower:scss
+@import "../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+@import "_cla.scss";
+
+/*============================================
+  Base Styles (used across all viewports)
+============================================*/
+
+body {
+  background: lighten($silver, 5%);
+}
+
+#wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.main-header {
+    padding-top: 25px;
+    @include clearfix;
+}
+
+h1.main-page-title {
+  font-size: 32px;
+  margin: 0;
+  float: left;
+}
+
+.install-btn {
+    float: right;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+h2 {
+  font-size: 19px;
+  margin-bottom: 20px;
+}
+
+header h2 {
+  margin-bottom: 20px;
+}
+
+header code {
+  margin-left: 0;
+}
+
+code:first-of-type {
+  header &,
+  .progress-wrap &,
+  .slider-wrap & {
+    margin-top: -20px !important;
+  }
+}
+
+section.content {
+  background: $white;
+  margin-top: 20px;
+  padding: 0 15px 30px;
+  @media only screen and (min-width: 640px) {
+    padding: 0 20px 30px;
+  }
+}
+
+.component-category {
+  text-transform: lowercase;
+  color: $white;
+  background: $charcoal;
+  padding: 10px;
+  margin: 0 -15px 20px -15px;
+  @media only screen and (min-width: 640px) {
+    margin: 0 -20px 20px -20px;
+  }
+}
+
+.component-subcat {
+  text-transform: uppercase;
+  color: $dark-red;
+  font-size: 1.5em;
+  font-weight: bolder;
+}
+
+.remove-neg-margin {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+code {
+  cursor: pointer;
+  &:hover {
+    color: darken(#C5D3DF, 20);
+  }
+  font-size: .8em;
+  color: #C5D3DF;
+  background: none;
+  padding: 0;
+  display: block;
+  margin-top: 0;
+  margin-left: -15px;
+  @media only screen and (min-width: 768px) {
+    margin-left: 0;
+  }
+}
+
+code:first-of-type {
+  margin-top: -20px;
+  @media only screen and (min-width: 768px) {
+    margin-top: 0;
+  }
+}
+
+code:last-of-type {
+  margin-bottom: 20px;
+}
+
+pre[class*="language-"] {
+  font-size: 18px;
+  border: none;
+  border-radius: 0;
+  background:transparent;
+  box-shadow: none;
+  width: 100%;
+  height: 100%;
+}
+
+// pre.language-markup {
+//    position: fixed;
+//    //background-color: $silver;
+//    //border: 1px solid #999;
+//    visibility: hidden;
+//    opacity: 0;
+//    z-index: 999;
+//    padding: 10px;
+//    //border-radius: 5px;
+//    transition: visibility .5s ease-in-out, opacity .5s ease-in-out;
+//    width: 500px;
+//    overflow: visible;
+//    top: 25%;
+//    left: calc(50% - 120px);
+// }
+
+// code:hover + .language-markup {
+//    visibility: visible;
+//    opacity: 1;
+//    transition: visibility .5s ease-in-out, opacity .5s ease-in-out;
+// }
+
+/*======================================
+  Alerts (Overrides)
+======================================*/
+
+.alert {
+  margin-bottom: 24px;
+  a {
+    margin-top: 6px;
+  }
+  //@include make-sm-column(9);
+  @extend .col-sm-9;
+  // make all .alert 9 cols in small view
+}
+
+.alert-action p {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.alert-action {
+  & p,
+  & a {
+    line-height: 1.25;
+  }
+}
+
+.close {
+  .alert-dismissible &,
+  .alert-dismissable & {
+    // same as .alert-dismissible .close, .alert-dismissable .close { ... }
+    right: 0;
+  }
+}
+
+.alert-block {
+  @extend .col-md-6;
+}
+
+.block-alert-wrap {
+  code {
+    margin-left: -15px;
+  }
+  code:first-of-type {
+    margin-top: -15px;
+  }
+}
+
+// .component-subcat .alert {
+//   margin-bottom: 0;
+// }
+
+// .alert-dismissable .close, .alert-dismissible .close {
+//     right: 0;
+//     top: 0;
+//     padding-left: 5px;
+// }
+
+// .alert-btn-group {
+//   display: inline-block;
+//   float: right;
+// }
+
+// .alert p {
+//   margin-bottom: 10px;
+// }
+
+// @media (max-width: 991px) and (min-width:767px) {
+//   .alert-block {
+//     width:95%;
+//     margin:0 5% 0 0;
+//   }
+// }
+
+// @media (min-width:992px) {
+//   .alert-block {
+//     width:50%;
+//   }
+// }
+
+/*======================================
+  Badges (Overrides)
+======================================*/
+
+.user-badge-wrap code {
+  margin-left: 0;
+}
+
+/*======================================
+  Branding Variables (Overrides)
+======================================*/
+
+// body {
+//    background: #edeff0;
+// }
+
+/*======================================
+  Breadcrumbs (Overrides)
+======================================*/
+
+/*======================================
+  Buttons (Overrides)
+======================================*/
+
+.button-group {
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px;
+  margin-left: 0;
+  min-width: 100px;
+  button {
+    margin-bottom: 5px;
+  }
+  code {
+    margin-left: 0;
+    margin-top: 0;
+  }
+  code:last-of-type {
+    margin-bottom: 0;
+  }
+  &.bg-light,
+  &.bg-medium,
+  &.bg-dark {
+    padding: 30px;
+    height: auto;
+  }
+  &.bg-light {
+    background-color: $platinum;
+    border: 1px solid $pewter;
+  }
+  &.bg-medium {
+    background-color: $pewter;
+    border: 1px solid $slate;
+  }
+  &.bg-dark {
+    background-color: $slate;
+    border: 1px solid $charcoal;
+  }
+}
+
+.button-group-wrap {
+  margin-left: 0;
+}
+
+// .button-colors code {
+//    margin-bottom: 15px;
+// }
+
+// .disabled-btns {
+
+//    div[class|="bg"] { // target all divs with "bg" in their classname, ie .bg-light, .bg-medium, etc
+//       border: 1px solid lighten($pewter, 30);
+//       padding: 15px 30px;
+//    }
+
+//    button {
+//       margin: 10px;
+//    }
+// }
+
+// .disabled-btn-container {
+//    margin-bottom: 15px;
+// }
+
+// .bg-light {
+//    //background: darken($white, 10);
+//    background: #f2f4f5;
+// }
+
+// .bg-medium {
+//    background: $pewter;
+// }
+
+// .bg-dark {
+//    background: $slate;
+// }
+
+// .btn.disabled-btn {
+//     cursor: not-allowed;
+// }
+
+// .button-extra-margin button + button {
+//    margin-left: 15px;
+//    margin-right: 15px;
+// }
+
+/*======================================
+  CLA (Overrides)
+======================================*/
+
+/*======================================
+  fonts (Overrides)
+======================================*/
+
+/*======================================
+  Forms (Overrides)
+======================================*/
+
+.text-group-wrap {
+  code {
+    margin: -20px 0 20px 0;
+  }
+}
+
+input[type="text"] + code {
+  margin-top: -5px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  button {
+    margin-top: -10px;
+  }
+}
+
+.input-group-btn, .input-group-addon {
+  width: inherit;
+}
+
+input[type="text"] {
+  width: 100%;
+}
+
+/*======================================
+  Icons (Overrides)
+======================================*/
+
+/*======================================
+  Impersonation (Overrides)
+======================================*/
+
+/*======================================
+  Labels (Overrides)
+======================================*/
+
+/*======================================
+  Mixins (Overrides)
+======================================*/
+
+/*======================================
+  Navbar (Overrides)
+======================================*/
+
+.nav-stacked {
+  width: 200px;
+}
+
+#nav-menu {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  width: 240px;
+  //matches width of smallest devices - old android phones
+  height: 100%;
+  //height: 100vh;
+  padding: 10px 0 0 0;
+  opacity: .98;
+  background: $charcoal;
+  right: -240px;
+  transition: right 0.5s ease-in-out;
+  a {
+    font-family: 'Source Sans Pro';
+    font-size: 22px;
+    display: inline-block;
+    width: 100%;
+    padding: 5px 15px;
+    color: $white;
+    outline: 0;
+  }
+  @media only screen and (min-width: 480px) {
+    width: 350px;
+    right: -350px;
+  }
+}
+
+#nav-menu.show-menu {
+  right: 0px;
+  transition: right 0.5s ease-in-out;
+}
+
+#nav-menu li {
+  margin: 0 0 2px 0;
+  list-style-type: none;
+  background: lighten($charcoal, 10%);
+}
+
+#nav-menu ul {
+  padding: 0;
+}
+
+#nav-menu a.nav-active {
+  color: #ccc;
+  background-color: lighten($charcoal, 5%);
+}
+
+a#menu-open {
+  width: 40px;
+}
+
+#nav-menu a:hover, #nav-menu a:active, #nav-menu a:focus {
+  text-decoration: none;
+  color: #ccc;
+  background-color: lighten($charcoal, 5%);
+}
+
+.menu-logo {
+  background-image: url("../img/logo-cl.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 60px;
+  font-size: 0;
+  // remove the H1 text using font-size instead of text-indend: -9999px;
+}
+
+.menu-header {
+  font-family: 'Oswald Light';
+  font-size: 22px;
+  @media only screen and (min-width: 480px) {
+    font-size: 30px;
+  }
+  margin: 15px;
+  margin-top: 30px;
+  color: $white;
+}
+
+#menu-open {
+  position: absolute;
+  z-index: 2;
+  top: 20px;
+  left: -40px;
+  width: 40px;
+  height: 45px;
+  padding: 5px;
+  border: none;
+  background: $charcoal;
+  background-image: url("../img/btn-menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.show-menu #menu-open {
+  background-image: url("../img/btn-menu-close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media only screen and (max-width: 960) {
+  h1.main-page-title {
+    margin-left: 15px;
+    padding-left: 15px;
+  }
+}
+
+.nav-menu-wrap {
+  height: 100%;
+  width: 350px;
+  background: #ccc;
+  //  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.scroll-enabled-nav {
+  width: 100%;
+  height: 100%;
+  flex: 1 1 auto;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+/*======================================
+  Navs (Overrides)
+======================================*/
+
+a > .badge {
+  margin: 3px;
+}
+
+/*======================================
+  Pagination (Overrides)
+======================================*/
+
+.pagination-collapsed li + li a {
+  border-left: none;
+}
+
+/*======================================
+  Panels (Overrides)
+======================================*/
+
+// @media only screen and (max-width: 767px) {
+//    header h2 + code {
+//       outline: 1px solid red;
+//       display: block;
+//       margin-left: 0;
+//    }
+
+// }
+
+/*======================================
+  Progress Bars (Overrides)
+======================================*/
+
+.progress-wrap,
+.slider-wrap,
+.text-input-addons-wrap {
+  code {
+    margin-left: 0;
+  }
+}
+
+/*======================================
+  Scaffolding (Overrides)
+======================================*/
+
+.img-group {
+  margin-bottom: 40px;
+  .img-code-wrap {
+    margin-right: 20px;
+  }
+}
+
+.img-code-wrap {
+  display: inline-block;
+  float: left;
+  margin-top: 10px;
+  a {
+    padding-top: 0;
+  }
+  code {
+    margin-top: 5px;
+    margin-left: 0;
+  }
+  code:last-of-type {
+    margin-bottom: 15px;
+  }
+}
+
+.label-group {
+  display: inline-block;
+  float: left;
+  margin: 10px;
+  position: relative;
+  height: 53px;
+  span + span {
+    position: absolute;
+    top: 35px;
+    left: 0px;
+  }
+}
+
+.label-group-wrap {
+  margin-left: -10px;
+}
+
+.badge {
+  margin: 10px;
+}
+
+.badge-subscript {
+  margin-left: -10px;
+  top: 10px;
+  margin-bottom: 20px;
+}
+
+.badge-group-wrap {
+  margin-left: -10px;
+}
+
+// @media only screen and (max-width: 767px) {
+//    img {
+//       margin-bottom: 10px;
+//       margin-top: 15px;
+//    }
+
+//    img ~ code, a ~ code { //remove neg margin on code under images
+//       margin-left: 0;
+//    }
+
+// }
+
+/*======================================
+  Slider (Overrides)
+======================================*/
+
+.slider {
+  display: inline-block;
+  min-width: 300px;
+  margin-bottom: 20px;
+}
+
+/*======================================
+  Tables (Overrides)
+======================================*/
+
+// thead {
+//    background: #f8f8f8;
+// }
+
+// tbody {
+//    border-bottom: 1px solid #ddd;
+// }
+
+// .panel .table {
+//   margin: -15px;
+//   width: 100%;
+// }
+
+/*======================================
+  Typography (Overrides)
+======================================*/
+
+/*======================================
+  Wells (Overrides)
+======================================*/
+
+//     .followMeBar {
+//         border-bottom: solid 1px darken(#1F3340, 10%);
+//         border-top: solid 1px lighten(#1F3340, 10%);
+//         padding: 1%;
+//         position: relative;
+//         z-index: 2;
+//     }
+//     .followMeBar.fixed {
+//         position: fixed;
+//         top: 0;
+//         width: 960px;
+//         z-index: 2;
+//     }
+//     .followMeBar.fixed.absolute {
+//         position: absolute;
+//     }
+
+// div.progress {
+//    margin-bottom: 10px;
+// }
+
+// // add a margin between two progress bars
+// .content .progress:first-of-type + code {
+//    margin-bottom: 20px
+// }
+
+// .input-group-addon {
+//    padding-top: 0;
+//    padding-bottom: 0;
+//    width: 20px;
+// }
+
+// .col-sm-3 {
+//    padding-left: 0;
+// }
+
+// @media only screen and (max-width: 960px) {
+//    h1.main-page-title {
+//       margin-left: 5px;
+//       padding-left: 5px;
+//    }
+// }
+
+// @media only screen and (max-width: 767px) {
+//    code:first-of-type {
+//       margin-top: -6px; //remove top margin from <code> when it slides beneath alerts
+
+//    }
+
+//    code:last-of-type {
+//       margin-bottom: 12px;
+//    }
+
+//    code {
+//       margin-left: -15px;
+//    }
+
+// }
+
+// @media only screen and (min-width: 768px) and (max-width: 1023px) {
+//    .alert-block + .col-md-6 {
+//       padding-left: 0;
+//    }
+// }
+
+/*======================================
+  Fonts (Overrides)
+======================================*/
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url("#{$font-path}SourceSansPro/SourceSansPro-LightItalic.eot");
+  src: url("#{$font-path}SourceSansPro/SourceSansPro-LightItalic.eot?#iefix") format("embedded-opentype"), url("#{$font-path}SourceSansPro/SourceSansPro-LightItalic.ttf") format("truetype"), url("#{$font-path}SourceSansPro/SourceSansPro-LightItalic.svg#SourceSansProRegular") format("svg");
+  font-weight: 200;
+  font-style: normal;
+}
+
+
+//code popup
+
+#wrapper-blur.blur {
+  filter: blur(3px);
+}
+
+.popup {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 90%;
+  max-width: 900px;
+  @media screen and (max-width: 768px) {
+    width: 90%;
+  }
+  height: 150px;
+  //font-family:verdana;
+  //font-size:13px;
+  //padding:10px;
+  //background-color:rgb(240,240,240);
+  //border:2px solid grey;
+  z-index: 9999;
+  &:before {
+    content: '';
+    position: fixed;
+    display: block;
+    background-color: rgba($charcoal, 0.95);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+}
+
+.cancel {
+  position: relative;
+  top: 0;
+  right: 24px;
+  cursor: pointer;
+  margin: 0;
+  float: right;
+  height: 35px;
+  width: 30px;
+  padding-bottom: 10px;
+
+  text-align: center;
+  font-size: 24px;
+  color: #888;
+  z-index: 100000000000000000;
+}
+
+.cancel:hover {
+  background: #888;
+  color: black;
+}

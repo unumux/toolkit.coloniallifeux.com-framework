@@ -1,0 +1,17 @@
+{
+    "scss": {
+        "src": "css/**/*.scss",
+        "dest": "css"
+    },
+    "js": {
+        "src": "js/**/*.js",
+        "dest": "js"
+    },
+    "watch": [
+        "index.html",
+        "js/**/*.js"
+    ],
+    "server": true,
+    "compileJs": false,
+    "proxy": false
+}

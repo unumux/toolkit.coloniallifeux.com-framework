@@ -1,0 +1,38 @@
+<section class="content" id="install" name="install">
+    <h1 class="component-category">Installation and Usage</h1>
+    <h2 class="component-subcat">Installation using UX command line utility (recommended)</h2>
+
+    <h4>Requirements</h4>
+    <ul>
+        <li><a href="https://nodejs.org">NodeJS</a></li>
+        <li>Bower (npm install bower -g)</li>
+        <li>UX-CLI (npm install @unumux/ux-cli -g)</li>
+    </ul>
+
+    <h4>UX-CLI usage</h4>
+
+    <p>UX-CLI is a command line utility used to run our build tools, and also to scaffold out static marketing sites.</p>
+    <p>UX-CLI can be used by opening your terminal or command prompt, and using <mark class="highlight">cd</mark> to navigate to your project directory. Running <mark class="highlight">ux</mark> will ask a series of questions to set up a new project, or run an existing one based on a ux.json file. More information on ux-cli can be <a href="https://www.npmjs.com/package/@unumux/ux-cli">read here</a></p>
+
+    <h4>Using Colonial Branding</h4>
+
+    <p>Colonial branding (the framework items shown above) can be installed via the UX tool during project initialization, or via bower as listed below. If you want to use the UX tool to install libraries after initialization, you can use the command <mark class="highlight">ux --install</mark></p>
+    <p>The branding files will also have to be imported into your SCSS stylesheet. This can be done by putting <mark class="highlight">@import "colonial-branding/main";</mark> in your main SCSS file.</p>
+
+    <h2 class="component-subcat">Installation using Bower</h2>
+
+    <p>If you want to use the branding files outside of our UX build process, you can install using bower.</p>
+
+    <h4>Requirements</h4>
+    <ul>
+        <li><a href="https://nodejs.org">NodeJS</a></li>
+        <li>Bower (npm install bower -g)</li>
+    </ul>
+
+    <p>The bower install can be done by typing <mark class="highlight">bower install unumux/colonial-branding --save</mark></p>
+
+    <h2 class="component-subcat">Download of CSS stylesheets (unrecommended)</h2>
+    <p>The framework can also be obtained by downloading the CSS stylesheets. These will have to be added to your markup using a link tag. This method is not recommended as it will not optimize the framework styles with the custom site styles, but it is made available for special circumstances.</p>
+    <p>The file main.css is the file you need, unless you also want to use the bootstrap JS for various components. The "lite.css" includes less CSS, and should not be used at the same time as "main.css".  The "colonial-branding.zip" includes everything</p>
+    <a href="https://github.com/unumux/colonial-branding/releases/tag/3.0.2" class="btn btn-steel">Download here</a>
+</section>
